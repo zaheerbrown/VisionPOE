@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"
+    android:background="@color/vision_black">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:background="@color/vision_black">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VISION" android:textColor="@color/vision_lime" android:textStyle="bold" android:textSize="30sp" android:letterSpacing="0.18"/>
+        <TextView android:id="@+id/screenTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DISCOVER VISION" android:textColor="@android:color/white" android:textStyle="bold" android:textSize="16sp" android:layout_marginTop="4dp"/>
+        <SearchView android:id="@+id/searchView" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="12dp" android:queryHint="Search products or categories" android:background="@drawable/search_bg" android:iconifiedByDefault="false"/>
+    </LinearLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="@color/vision_offwhite">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/productRecycler" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10dp" android:clipToPadding="false"/>
+        <ProgressBar android:id="@+id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center"/>
+        <TextView android:id="@+id/emptyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="center" android:gravity="center" android:padding="32dp" android:textColor="@color/vision_grey" android:textSize="16sp" android:visibility="gone"/>
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@+id/bottomNav" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:color/white" app:menu="@menu/bottom_nav" xmlns:app="http://schemas.android.com/apk/res-auto" app:itemIconTint="@color/nav_selector" app:itemTextColor="@color/nav_selector"/>
+</LinearLayout>
